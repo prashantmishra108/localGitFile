@@ -8,6 +8,8 @@ public class Anagram {
 	// This function returns true if contents
 	// of arr1[] and arr2[] are same, otherwise
 	// false.
+	
+	//for code review
 	static boolean compare(char arr1[], char arr2[]) {
 		for (int i = 0; i < MAX; i++)
 			if (arr1[i] != arr2[i])
