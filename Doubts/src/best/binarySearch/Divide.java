@@ -6,7 +6,8 @@ public class Divide {
 	}
 	
 	public int divide1(int dividend, int divisor) {
-        long a = Math.abs((long)dividend);
+        
+	long a = Math.abs((long)dividend);
         
         // ref : http://blog.csdn.net/kenden23/article/details/16986763
         // Note: �����������ȡlong��abs������int����Сֵabs��Ҳ��ԭֵ
