@@ -1,0 +1,80 @@
+ i = 0
+C1 0
+ i = 1
+C1 1
+ i = 2
+C1 2
+ i = 3
+C1 3
+
+
+ i = 0
+C2 0
+ i = 0
+C1 1
+ i = 2
+C1 2
+ i = 2
+C2 3
+ i = 4
+C1 4
+ i = 4
+C2 5
+four line each are getting printed without taking notify all.wait when used without notify releases the lock but do not notifie hence both threads executes at the same time and wait together..
+blow is with notify() 
+ i = 0
+C2 0
+ i = 0
+C1 1
+ i = 2
+C2 2
+ i = 2
+C1 3
+ i = 4
+C2 4
+ i = 4
+C1 5
+--------------
+ i = 0
+ i = 0
+C1 0  b4 wait 
+C2 1  b4 wait 
+C1 2  aftr wait b4 notify 
+C2 2  aftr wait b4 notify 
+C1 2  aftr notify 
+C2 2  aftr notify 
+ i = 2
+ i = 2
+C1 2  b4 wait 
+C2 3  b4 wait 
+----------------
+
+ i = 0
+ i = 0
+C1 0  b4 wait 
+C2 1  b4 wait 
+C1 2  aftr wait b4 notify 
+C1 2  aftr notify 
+ i = 2
+C1 2  b4 wait 
+C2 3  aftr wait b4 notify 
+C2 3  aftr notify 
+ i = 3
+C2 3  b4 wait 
+--------------
+ i = 0
+ i = 0
+C1 0  b4 wait 
+C2 1  b4 wait 
+C1 2  aftr wait b4 notify 
+C2 2  aftr wait b4 notify 
+C2 2  aftr notify 
+ i = 2
+C2 2  b4 wait 
+C1 3  aftr notify 
+ i = 3
+C1 3  b4 wait 
+aftr notify() C1 or C2 whichever notifies first 
+move to the top of the md() again till it reaches
+wait..then only the other thread goes on to bcum wait.
+
