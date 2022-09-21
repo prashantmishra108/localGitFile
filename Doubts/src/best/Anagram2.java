@@ -4,7 +4,7 @@ package best;
 //of a pattern in a text
 public class Anagram2 {
 	static final int MAX = 256;
-
+//new changes
 	// This function returns true if contents
 	// of arr1[] and arr2[] are same, otherwise
 	// false.

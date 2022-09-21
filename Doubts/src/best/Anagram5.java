@@ -4,11 +4,11 @@ package best;
 //of a pattern in a text
 public class Anagram5 {
 	static final int MAX = 256;
-
+	int parametertoberemoved=10;int parametertoberemoved1=10;
 	// This function returns true if contents
 	// of arr1[] and arr2[] are same, otherwise
 	// false.
-	
+	//change
 	//for code review, anagram5 changed
 	static boolean compare(char arr1[], char arr2[]) {
 		for (int i = 0; i < MAX; i++)
