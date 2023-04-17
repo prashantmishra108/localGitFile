@@ -2,14 +2,14 @@ package best;
 
 //Java program to search all anagrams 
 //of a pattern in a text
-public class Anagram2 {
+public class Anagram5 {
 	static final int MAX = 256;
-//new changes
+	int parametertoberemoved=10;int parametertoberemoved1=10;
 	// This function returns true if contents
 	// of arr1[] and arr2[] are same, otherwise
 	// false.
-	
-	//for code review
+	//change
+	//for code review, anagram5 changed
 	static boolean compare(char arr1[], char arr2[]) {
 		for (int i = 0; i < MAX; i++)
 			if (arr1[i] != arr2[i])

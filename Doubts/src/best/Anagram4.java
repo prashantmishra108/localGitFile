@@ -2,9 +2,9 @@ package best;
 
 //Java program to search all anagrams 
 //of a pattern in a text
-public class Anagram2 {
+public class Anagram4 {
 	static final int MAX = 256;
-//new changes
+
 	// This function returns true if contents
 	// of arr1[] and arr2[] are same, otherwise
 	// false.

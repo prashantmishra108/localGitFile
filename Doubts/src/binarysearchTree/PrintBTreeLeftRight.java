@@ -1,7 +1,9 @@
 package binarysearchTree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 //Java program to print left view of binary tree
 /* Class containing left and right child of current
@@ -66,8 +68,26 @@ public class PrintBTreeLeftRight {
 		for (int i = 0; i < 6; i++) {
 			for (int j = 0; j < 6; j++) {
 				if (matrix[i][j] != 0)
-					System.out.print(matrix[i][j] + " ");
+					//System.out.print(matrix[i][j] + " ");
+				System.out.print("");
 			}
 		}
+		
+		//find leftmost value in the last row of the tree.
+		List<Node1> q = new LinkedList();
+		Node1 root = new Node1(0);
+		q.add(tree.root);
+		while(!q.isEmpty()) {
+			root=q.remove(0);
+			if(root.right!=null)
+				q.add(root.right);
+			
+
+			if(root.left!=null)
+				q.add(root.left);
+		}
+		
+		System.out.println(root.data);
+	
 	}
 }
